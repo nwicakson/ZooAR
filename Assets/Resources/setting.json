@@ -1,0 +1,89 @@
+{
+	"animal" : [
+		{
+			"name" : "Gorila",
+			"info" : [
+				"gorilla blablabla",
+				"gorilla 2 blablabla",
+				"gorilla 3 blablabla"
+			],
+			"listQuestion" : [
+				{
+					"question" : "gorilla makan pisang?",
+					"answerBool" : true,
+					"answer" : "makanan kesukaan gorilla ada pisang"
+				},
+				{
+					"question" : "gorilla adalah binatang tertinggi?",
+					"answerBool" : false,
+					"answer" : "binatang tertinggi adalah jerapah"
+				}
+			]
+		},
+		{
+			"name" : "Gajah",
+			"info" : [
+				"elephant blablabla",
+				"elephant 2 blablabla",
+				"elephant 3 blablabla"
+			],
+			"listQuestion" : [
+				{
+					"question" : "elephant makan pisang?",
+					"answerBool" : true,
+					"answer" : "makanan yang disukai gajah adalah buah-buahan, termasuk pisang"
+				},
+				{
+					"question" : "elephant adalah binatang tertinggi?",
+					"answerBool" : false,
+					"answer" : "binatang tertinggi adalah jerapah"
+				},
+				{
+					"question" : "elephant adalah binatang terbesar di darat?",
+					"answerBool" : true,
+					"answer" : "binatang tertinggi di darat adalah jerapah"
+				}
+			]
+		},
+		{
+			"name" : "Jerapah",
+			"info" : [
+				"gorilla blablabla",
+				"gorilla 2 blablabla",
+				"gorilla 3 blablabla"
+			],
+			"listQuestion" : [
+				{
+					"question" : "gorilla makan pisang?",
+					"answerBool" : true,
+					"answer" : "makanan kesukaan gorilla ada pisang"
+				},
+				{
+					"question" : "gorilla adalah binatang tertinggi?",
+					"answerBool" : false,
+					"answer" : "binatang tertinggi adalah jerapah"
+				}
+			]
+		},
+		{
+			"name" : "Singa",
+			"info" : [
+				"gorilla blablabla",
+				"gorilla 2 blablabla",
+				"gorilla 3 blablabla"
+			],
+			"listQuestion" : [
+				{
+					"question" : "gorilla makan pisang?",
+					"answerBool" : true,
+					"answer" : "makanan kesukaan gorilla ada pisang"
+				},
+				{
+					"question" : "gorilla adalah binatang tertinggi?",
+					"answerBool" : false,
+					"answer" : "binatang tertinggi adalah jerapah"
+				}
+			]
+		}
+	]
+}

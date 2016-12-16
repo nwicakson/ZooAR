@@ -15,6 +15,7 @@ namespace Vuforia
     public class DefaultTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
+        public GameObject panelScanning, panelScanned;
         public Text animalName;
 
         #region PRIVATE_MEMBER_VARIABLES
@@ -87,16 +88,9 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
-
-            if (mTrackableBehaviour.TrackableName == "gorilla")
-            {
-                animalName.text = "Gorilla";
-
-            }
-            else if (mTrackableBehaviour.TrackableName == "elephant")
-            {
-                animalName.text = "Elephant";
-            }
+            
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<Play>().Scanned(mTrackableBehaviour.TrackableName);
+            
         }
 
 

@@ -8,12 +8,6 @@ public class MainMenu : MonoBehaviour
     public AudioClip backgroundMusic;
     private SoundManager soundManager;
 
-    void Awake()
-    {
-        //TextAsset file = Resources.Load<TextAsset>("InitialSetting");
-        //prettyJson = JsonMapper.ToObject(file.text);
-    }
-
     void Start()
     {
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
@@ -26,10 +20,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Play");
     }
 
-    public void Setting()
+    public void History()
     {
         soundManager.PlaySoundEffect(sfx);
-        SceneManager.LoadScene("Setting");
+        SceneManager.LoadScene("History");
     }
 
     public void Exit()
