@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using LitJson;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class History : MonoBehaviour {
 
-    public GameObject[] animal;
-    public GameObject[] animalShadow;
-    public Text[] animalScore;
+    public GameObject[] animal, animalShadow;
+    public Text[] animalName, animalScore;
     private JsonData prettyJson;
     private int animalCount;
 
@@ -22,19 +22,24 @@ public class History : MonoBehaviour {
             {
                 animalShadow[i].SetActive(false);
                 animal[i].SetActive(true);
+                animalName[i].text = prettyJson["animal"][i]["name"].ToString();
+                animalScore[i].text = PlayerPrefs.GetInt(prettyJson["animal"][i]["name"] + "Highscore").ToString();
             }
             else
             {
                 animal[i].SetActive(false);
                 animalShadow[i].SetActive(true);
+                animalName[i].text = "???";
+                animalScore[i].text = 0.ToString();
             }
         }
-        
+    }
+    
 
+    public void Back()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 	
-	// Update is called once per frame
-	void Update () {
 	
-	}
 }

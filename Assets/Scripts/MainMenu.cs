@@ -20,10 +20,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Play");
     }
 
-    public void History()
+    public void Ensiklopedia()
     {
         soundManager.PlaySoundEffect(sfx);
-        SceneManager.LoadScene("History");
+        SceneManager.LoadScene("Ensiklopedia");
     }
 
     public void Exit()

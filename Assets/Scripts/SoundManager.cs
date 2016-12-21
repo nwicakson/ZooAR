@@ -19,6 +19,11 @@ public class SoundManager : MonoBehaviour
         backgroundMusic.Play();
     }
 
+    public void StopBackground()
+    {
+        backgroundMusic.Stop();
+    }
+
     public void PlaySoundEffect(AudioClip clip)
     {
         float randomPitch = Random.Range(lowPitchRange, highPitchRange);

@@ -2,86 +2,223 @@
 	"animal" : [
 		{
 			"name" : "Gorila",
+			"sound" : true,
 			"info" : [
-				"gorilla blablabla",
-				"gorilla 2 blablabla",
-				"gorilla 3 blablabla"
+				"Gorila adalah primata (sejenis dengan kera) yang terbesar",
+				"Gorila makan sayur-sayuran dan serangga, sehingga termasuk dalam binatang omnivora",
+				"Kekuatan gorila setara dengan 4 hingga 8 kali kekuatan manusia",
+				"Gorila betina berukuran setengahnya dari gorila jantan",
+				"Berat gorila mencapai 160 kg",
+				"Gorila akan beruban (warna bulu berubah keperakan) ketika menginjak usia sekitar 15 tahun",
+				"Gorila termasuk dalam binatang yang dilindungi"
 			],
 			"listQuestion" : [
 				{
-					"question" : "gorilla makan pisang?",
+					"question" : "Gorila makan pisang?",
 					"answerBool" : true,
-					"answer" : "makanan kesukaan gorilla ada pisang"
+					"answer" : "Makanan kesukaan gorila adalah pisang"
 				},
 				{
-					"question" : "gorilla adalah binatang tertinggi?",
+					"question" : "Gorila adalah binatang tertinggi?",
 					"answerBool" : false,
-					"answer" : "binatang tertinggi adalah jerapah"
+					"answer" : "Binatang tertinggi adalah jerapah"
+				},
+				{
+					"question" : "Gorila merupakan binatang mamalia?",
+					"answerBool" : true,
+					"answer" : "Gorila merupakan binatang mamalia (menyusui anaknya)"
+				},
+				{
+					"question" : "Gorila merupakan binatang herbivora?",
+					"answerBool" : false,
+					"answer" : "Gorila merupakan binatang omnivora. Ia suka makan sayur-sayuran dan serangga"
+				},
+				{
+					"question" : "Gorila merupakan binatang omnivora?",
+					"answerBool" : true,
+					"answer" : "Gorila merupakan binatang omnivora. Ia suka makan sayur-sayuran dan serangga"
+				},
+				{
+					"question" : "Gorila makan daging?",
+					"answerBool" : false,
+					"answer" : "Walaupun gorila itu binantang omnivora, tetapi ia tidak makan daging"
+				},
+				{
+					"question" : "Gorila merupakan binatang terbesar di dunia?",
+					"answerBool" : false,
+					"answer" : "Binatang terbesar adalah gajah"
+				},
+				{
+					"question" : "Gorila merupakan primata terbesar di dunia?",
+					"answerBool" : true,
+					"answer" : "Gorila merupakan jenis primata terbesar di dunia"
 				}
 			]
 		},
 		{
 			"name" : "Gajah",
+			"sound" : true,
 			"info" : [
-				"elephant blablabla",
-				"elephant 2 blablabla",
-				"elephant 3 blablabla"
+				"Gajah adalah binatang terbesar di dunia",
+				"Gajah makan buah sehingga gajah termasuk dalam binatang herbivora",
+				"Gajah memilik berat hingga 5.400 kg / 5,4 ton",
+				"Gajah hanya dapat berlari hingga 40 km / jam",
+				"Gajah memiliki belalai untuk bernapas dan memasukkan makan ke dalam mulutnya",
+				"Gajah juga memiliki gading yang kuat untuk melawan binatang lain",
+				"Gajah sering diburu oleh manusia karena gadingnya",
+				"Gajah termasuk dalam binatang yang dilindungi"
 			],
 			"listQuestion" : [
 				{
-					"question" : "elephant makan pisang?",
+					"question" : "Gajah makan pisang?",
 					"answerBool" : true,
-					"answer" : "makanan yang disukai gajah adalah buah-buahan, termasuk pisang"
+					"answer" : "Makanan yang disukai gajah adalah buah-buahan, termasuk pisang"
 				},
 				{
-					"question" : "elephant adalah binatang tertinggi?",
+					"question" : "Gajah adalah binatang omnivora?",
 					"answerBool" : false,
-					"answer" : "binatang tertinggi adalah jerapah"
+					"answer" : "Gajah makan buah sehingga gajah termasuk dalam binatang herbivora"
 				},
 				{
-					"question" : "elephant adalah binatang terbesar di darat?",
+					"question" : "Gajah adalah binatang tertinggi?",
+					"answerBool" : false,
+					"answer" : "Binatang tertinggi adalah jerapah"
+				},
+				{
+					"question" : "Gajah adalah binatang terbesar di darat?",
 					"answerBool" : true,
-					"answer" : "binatang tertinggi di darat adalah jerapah"
+					"answer" : "Binatang terbesar di darat adalah gajah"
+				},
+				{
+					"question" : "Gajah adalah binatang terberat di darat?",
+					"answerBool" : true,
+					"answer" : "Gajah adalah binatang terberat di darat dengan berat hingga 5,4 ton"
+				},
+				{
+					"question" : "Gajah mengeluarkan suara lewat mulutnya?",
+					"answerBool" : false,
+					"answer" : "Gajah melengkingkan suaranya menggunakan belalainya"
+				},
+				{
+					"question" : "Gajah melawan musuhnya menggunakan belalai?",
+					"answerBool" : false,
+					"answer" : "Gajah juga memiliki gading yang kuat untuk melawan binatang lain"
+				},
+				{
+					"question" : "Gajah lebih lambat dibanding singa?",
+					"answerBool" : true,
+					"answer" : "Gajah hanya dapat berlari hingga 40 km / jam, sedangkan singa hingga 80 km / jam"
 				}
 			]
 		},
 		{
 			"name" : "Jerapah",
+			"sound" : false,
 			"info" : [
-				"gorilla blablabla",
-				"gorilla 2 blablabla",
-				"gorilla 3 blablabla"
+				"Jerapah adalah mamalia tertinggi di dunia, mencapai 6 meter",
+				"Jerapah makan daun dan buah, sehingga jerapah termasuk dalam binatang herbivora",
+				"Jerapah hidup berkelompok agar tidak diburu oleh singa, harimau atau hyena",
+				"Jerapah dapat berlari hingga kecepatan 60 km / jam",
+				"Jerapah menggunakan infrasound sehingga manusia tidak bisa mendengarnya",
+				"Jerapah memiliki tanduk walaupun kecil",
+				"Jerapah memiliki lidah yang panjang yaitu hingga 18 inci",
+				"Jerapah dapat bertahan hidup beberapa hari tanpa minum air",
+				"Jerapah menggantungkan hidupnya pada kandungan air dalam daun-daun",
+				"Saat menemukan air, jerapah dapat menghabiskan 12 galon air"
 			],
 			"listQuestion" : [
 				{
-					"question" : "gorilla makan pisang?",
+					"question" : "Jerapah menyusui anaknya?",
 					"answerBool" : true,
-					"answer" : "makanan kesukaan gorilla ada pisang"
+					"answer" : "Jerapah adalah mamalia"
 				},
 				{
-					"question" : "gorilla adalah binatang tertinggi?",
+					"question" : "Jerapah adalah binatang tertinggi?",
+					"answerBool" : true,
+					"answer" : "Binatang tertinggi adalah jerapah"
+				},
+				{
+					"question" : "Jerapah adalah binatang herbivora?",
+					"answerBool" : true,
+					"answer" : "Jerapah makan daun dan buah, tidak makan daging"
+				},
+				{
+					"question" : "Jerapah makan rumput?",
+					"answerBool" : true,
+					"answer" : "Walaupun jerapah tinggi, jerapah juga bisa makan rumput"
+				},
+				{
+					"question" : "Jerapah terbiasa hidup di gunung?",
 					"answerBool" : false,
-					"answer" : "binatang tertinggi adalah jerapah"
+					"answer" : "Tempat jerapah tinggal adalah savana"
+				},
+				{
+					"question" : "Jerapah betina memiliki tanduk?",
+					"answerBool" : true,
+					"answer" : "Jerapah jantan dan betina sama-sama memiliki tanduk"
+				},
+				{
+					"question" : "Jerapah lebih berat dibanding gorila?",
+					"answerBool" : true,
+					"answer" : "JBerat jerapah 1.200 kg, sedangkan berat gorila 160 kg"
+				},
+				{
+					"question" : "Jerapah lebih cepat dibanding singa?",
+					"answerBool" : false,
+					"answer" : "Berat jerapah 1.200 kg, sedangkan berat gorila 160 kg"
 				}
 			]
 		},
 		{
 			"name" : "Singa",
+			"sound" : true,
 			"info" : [
-				"gorilla blablabla",
-				"gorilla 2 blablabla",
-				"gorilla 3 blablabla"
+				"Singa memiliki bentuk tubuh yang sama dengan kucing tetapi dengan ukuran yang lebih besar",
+				"Singa hanya makan daging, sehingga singa termasuk dalam binatang karnivora",
+				"Untuk mengejar mangsanya, singa dapat berlari hingga kecepatan 80 km / jam",
+				"Singa memiliki penglihatan yang tajam saat malam hari, 6x lebih sensitif dari manusia",
+				"Singa tidur 16 - 20 jam sehari"
 			],
 			"listQuestion" : [
 				{
-					"question" : "gorilla makan pisang?",
+					"question" : "Singa adalah kucing terbesar?",
 					"answerBool" : true,
-					"answer" : "makanan kesukaan gorilla ada pisang"
+					"answer" : "Singa memiliki bentuk tubuh yang sama dengan kucing tetapi dengan ukuran yang lebih besar"
 				},
 				{
-					"question" : "gorilla adalah binatang tertinggi?",
+					"question" : "Singa makan rumput?",
 					"answerBool" : false,
-					"answer" : "binatang tertinggi adalah jerapah"
+					"answer" : "Singa tidak makan daun, singa makan daging"
+				},
+				{
+					"question" : "Singa adalah binatang omnivora?",
+					"answerBool" : false,
+					"answer" : "Singa hanya makan daging, sehingga singa termasuk binatang karnivora"
+				},
+				{
+					"question" : "Singa lebih cepat dibanding gajah?",
+					"answerBool" : true,
+					"answer" : "Singa dapat berlari hingga 80 km / jam, sedangkan gajah hanya 40 km / jam"
+				},
+				{
+					"question" : "Singa adalah binatang tercepat?",
+					"answerBool" : false,
+					"answer" : "Binatang tercepat adalah cheetah dengan kecepatan hingga 120 km / jam"
+				},
+				{
+					"question" : "Singa disebut sebagai raja hutan?",
+					"answerBool" : true,
+					"answer" : "Singa disebut sebagai raja hutan karena kuat dan cepat"
+				},
+				{
+					"question" : "Singa biasa berburu di siang hari?",
+					"answerBool" : false,
+					"answer" : "Singa sering berburu pada malam hari karena memiliki penglihatan yang tajam"
+				},
+				{
+					"question" : "Singa merupakan kucing termalas?",
+					"answerBool" : true,
+					"answer" : "Singa tidur hingga 20 jam sehari"
 				}
 			]
 		}

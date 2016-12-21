@@ -8,14 +8,14 @@ using System.Collections.Generic;
 
 public class Play : MonoBehaviour {
 
-    public GameObject panelScanning, panelScanned, panelQuiz, panelInfo, btnQuiz, btnInfo;
+    public GameObject panelScanning, panelScanned, panelQuiz, panelQuiz2, panelInfo, btnQuiz, btnInfo;
     public Text textAnimalName, textInfo;
     public GameObject imagePrevInfo, imageNextInfo;
-    public Text textQuestion, textAnswer, textResult;
+    public Text textQuestion, textAnswer, textResult, textScore;
     public GameObject panelQuestion, panelAnswer, panelResult;
-    public AudioClip sfx;
-    public AudioClip backgroundMusic;
+    public AudioClip[] sfx;
     public AudioClip[] animalSounds;
+    public TimerManager timeManager;
     private SoundManager soundManager;
     private JsonData prettyJson;
     private int animalCount;
@@ -34,7 +34,7 @@ public class Play : MonoBehaviour {
         prettyJson = JsonMapper.ToObject(file.text);
         animalCount = prettyJson["animal"].Count;
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
-        soundManager.PlayBackground(backgroundMusic);
+        soundManager.StopBackground();
         panelScanned.SetActive(false);
         btnInfo.SetActive(false);
         panelScanning.SetActive(true);
@@ -46,9 +46,17 @@ public class Play : MonoBehaviour {
 	
 	}
 
+    public void Back()
+    {
+        if (panelScanning.activeInHierarchy)
+            Exit();
+        else
+            Scanning();
+    }
+
     public void Exit()
     {
-        soundManager.PlaySoundEffect(sfx);
+        soundManager.PlaySoundEffect(sfx[0]);
         SceneManager.LoadScene("Main Menu");
     }
 
@@ -64,6 +72,7 @@ public class Play : MonoBehaviour {
         panelScanned.SetActive(true);
         panelInfo.SetActive(true);
         panelQuiz.SetActive(false);
+        panelQuiz2.SetActive(false);
         for(int i=0; i<animalCount; i++)
         {
             if(prettyJson["animal"][i]["name"].ToString() == animalName)
@@ -133,14 +142,28 @@ public class Play : MonoBehaviour {
         {
             panelQuestion.SetActive(false);
             panelResult.SetActive(true);
-            textResult.text = "Kamu mendapat " + score + " Point";
             if (PlayerPrefs.HasKey(textAnimalName.text + "Highscore") && PlayerPrefs.GetInt(textAnimalName.text + "Highscore") < score)
+            {
                 PlayerPrefs.SetInt(textAnimalName.text + "Highscore", score);
+                textResult.text = "Selamat, kamu mencetak Highscore dengan " + score + " Point";
+                soundManager.PlaySoundEffect(sfx[3]);
+            }
+            else if (score > 100){
+                textResult.text = "Selamat, kamu mendapat " + score + " Point";
+                soundManager.PlaySoundEffect(sfx[4]);
+            }
+            else
+            {
+                textResult.text = "Sayang sekali, kamu cuma mendapat " + score + " Point";
+                soundManager.PlaySoundEffect(sfx[5]);
+            }
         }
         else
         {
             textQuestion.text = question[questionIndex];
             textAnswer.text = answer[questionIndex];
+            timeManager.Start();
+            timeManager.StartTimer(true);
         }
     }
 
@@ -152,16 +175,18 @@ public class Play : MonoBehaviour {
 
     public void Answer(bool ans)
     {
+        timeManager.StartTimer(false);
         if (answerBool[questionIndex] != ans)
         {
             panelQuestion.SetActive(false);
-            //sound salah
+            soundManager.PlaySoundEffect(sfx[2]);
             panelAnswer.SetActive(true);
         }
         else
         {
-            //sound benar
-            score++;
+            soundManager.PlaySoundEffect(sfx[1]);
+            score += 10 * timeManager.GetTime();
+            textScore.text = score.ToString();
             NextQuestion();
         }
     }
@@ -171,6 +196,9 @@ public class Play : MonoBehaviour {
         panelInfo.SetActive(false);
         btnQuiz.SetActive(false);
         panelQuiz.SetActive(true);
+        panelQuiz2.SetActive(true);
+        timeManager.Start();
+        timeManager.StartTimer(true);
         panelQuestion.SetActive(true);
         panelAnswer.SetActive(false);
         panelResult.SetActive(false);
@@ -180,16 +208,17 @@ public class Play : MonoBehaviour {
     public void Info()
     {
         panelQuiz.SetActive(false);
+        panelQuiz2.SetActive(false);
         btnInfo.SetActive(false);
         panelInfo.SetActive(true);
         btnQuiz.SetActive(true);
     }
 
-    public void PlaysSoundAnimal()
+    public void PlaySoundAnimal()
     {
         for(int i=0; i<animalCount; i++)
         {
-            if(prettyJson["animal"][i]["name"].ToString() == textAnimalName.text)
+            if(prettyJson["animal"][i]["name"].ToString() == textAnimalName.text && (bool)prettyJson["animal"][i]["sound"])
                 soundManager.PlaySoundEffect(animalSounds[i]);
         }
     }
