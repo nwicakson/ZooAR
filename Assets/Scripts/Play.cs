@@ -73,6 +73,8 @@ public class Play : MonoBehaviour {
         panelInfo.SetActive(true);
         panelQuiz.SetActive(false);
         panelQuiz2.SetActive(false);
+        btnInfo.SetActive(false);
+        btnQuiz.SetActive(true);
         for(int i=0; i<animalCount; i++)
         {
             if(prettyJson["animal"][i]["name"].ToString() == animalName)
@@ -173,6 +175,13 @@ public class Play : MonoBehaviour {
         Scanning();
     }
 
+    public void TimeUp()
+    {
+        panelQuestion.SetActive(false);
+        soundManager.PlaySoundEffect(sfx[2]);
+        panelAnswer.SetActive(true);
+    }
+
     public void Answer(bool ans)
     {
         timeManager.StartTimer(false);
@@ -203,6 +212,7 @@ public class Play : MonoBehaviour {
         panelAnswer.SetActive(false);
         panelResult.SetActive(false);
         btnInfo.SetActive(true);
+        textScore.text = score.ToString();
     }
 
     public void Info()

@@ -34,6 +34,12 @@ public class History : MonoBehaviour {
             }
         }
     }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Back();
+    }
     
 
     public void Back()

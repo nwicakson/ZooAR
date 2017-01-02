@@ -6,6 +6,7 @@ public class TimerManager : MonoBehaviour {
 
     private float time;
     public GameObject panelTimeUp;
+    public Play playScript;
     public Text textTimer;
     private bool stopTimer;
 
@@ -37,6 +38,7 @@ public class TimerManager : MonoBehaviour {
                 timeLeft = 0;
                 stopTimer = true;
                 panelTimeUp.SetActive(true);
+                playScript.TimeUp();
             }
             time -= Time.deltaTime;
             textTimer.text = timeLeft.ToString();
